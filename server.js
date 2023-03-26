@@ -19,7 +19,7 @@ mongoose
 
 import { Server } from "socket.io";
 
-const io = new Server({
+const io = new Server(9000, {
 	cors: {
 		origin: "https://whatsapp-clone-83cb.onrender.com",
 	},
