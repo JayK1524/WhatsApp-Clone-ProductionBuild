@@ -75,7 +75,11 @@ const Conversation = ({ user }) => {
 				</Container>
 				<Box>
 					<Text>
-						{message?.text?.includes("whatsapp") ? "media" : message.text}
+						{message?.text?.includes(
+							"https://whatsapp-clone-83cb.onrender.com/"
+						)
+							? "media"
+							: message.text}
 					</Text>
 				</Box>
 			</Box>
