@@ -1,5 +1,6 @@
-import mongoose from "mongoose";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
+import { Server } from "socket.io";
 
 dotenv.config({ path: "./config.env" });
 import app from "./app.js";
@@ -17,11 +18,14 @@ mongoose
 	})
 	.then(() => console.log("DB connection successful!"));
 
-import { Server } from "socket.io";
+const port = process.env.PORT || 8000;
+const server = app.listen(port, () => {
+	console.log(`App running on port ${port}...`);
+});
 
-const io = new Server(`ws://whatsapp-clone-83cb.onrender.com`, {
+const io = new Server(server, {
 	cors: {
-		origin: "https://whatsapp-clone-83cb.onrender.com",
+		origin: "http://whatsapp-clone-83cb.onrender.com",
 	},
 });
 
@@ -50,9 +54,4 @@ io.on("connection", (socket) => {
 		let user = getUser(data.receiverId);
 		io.to(user && user.socketId).emit("getMessage", data);
 	});
-});
-
-const port = process.env.PORT || 8000;
-app.listen(port, () => {
-	console.log(`App running on port ${port}...`);
 });

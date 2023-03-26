@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://whatsapp-clone-83cb.onrender.com";
+const url = "http://whatsapp-clone-83cb.onrender.com";
 
 export const addUser = async (data) => {
 	try {
