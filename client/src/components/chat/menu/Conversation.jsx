@@ -75,9 +75,7 @@ const Conversation = ({ user }) => {
 				</Container>
 				<Box>
 					<Text>
-						{message?.text?.includes("whatsapp-clone-83cb")
-							? "media"
-							: message.text}
+						{message?.text?.includes("whatsapp") ? "media" : message.text}
 					</Text>
 				</Box>
 			</Box>
