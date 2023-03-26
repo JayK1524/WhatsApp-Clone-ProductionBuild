@@ -21,7 +21,7 @@ import { Server } from "socket.io";
 
 const io = new Server({
 	cors: {
-		origin: "https://whatsapp-wyto.onrender.com",
+		origin: "https://whatsapp-clone-83cb.onrender.com",
 	},
 });
 
