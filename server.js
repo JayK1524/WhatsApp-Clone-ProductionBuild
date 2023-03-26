@@ -25,7 +25,7 @@ const server = app.listen(port, () => {
 
 const io = new Server(server, {
 	cors: {
-		origin: "http://whatsapp-clone-83cb.onrender.com",
+		origin: "https://whatsapp-clone-83cb.onrender.com",
 	},
 });
 

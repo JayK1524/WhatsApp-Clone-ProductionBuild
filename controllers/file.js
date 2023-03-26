@@ -1,7 +1,7 @@
 import grid from "gridfs-stream";
 import mongoose from "mongoose";
 
-const url = "http://whatsapp-clone-83cb.onrender.com";
+const url = "https://whatsapp-clone-83cb.onrender.com";
 
 // to getFile and read it //
 let gfs;
